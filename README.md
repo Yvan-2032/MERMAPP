@@ -1,1 +1,1 @@
-# MERMAPP
+# ReactMermApp
