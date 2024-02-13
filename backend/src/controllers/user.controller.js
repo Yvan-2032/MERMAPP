@@ -14,11 +14,11 @@ UserController.createUser = async (req, res) => {
 }
 UserController.updateUser = async (req, res) => {
   const { username } = req.body
-  await Note.findOneAndUpdate({ _id: req.params.id }, { username })
+  await User.findOneAndUpdate({ _id: req.params.id }, { username })
   res.json({ message: 'User Updated' })
 }
 UserController.deleteUser = async (req, res) => {
-  await Note.findByIdAndDelete(req.params.id)
+  await User.findByIdAndDelete(req.params.id)
   res.json({ message: 'User Deleted' })
 }
 module.exports = UserController
